@@ -3,7 +3,7 @@
 Simple class with tested methods that calculates lists of numbers using loops.
 It also computes the sequence of the first 100 Fibonacci numbers.
 
-[![Build Status](https://travis-ci.org/darusca/algorithms.svg?branch=master)](https://travis-ci.org/webnanogy/algorithms)
+[![Build Status](https://travis-ci.org/darusca/algorithms.svg?branch=master)](https://travis-ci.org/darusca/algorithms)
 
 ### Prerequisites
 
