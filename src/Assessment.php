@@ -36,7 +36,7 @@ class Assessment
             }
         }
 
-        echo 'Result ' . $closest;
+        echo "Result $closest \n";
 
         return $closest;
     }
@@ -126,7 +126,7 @@ class Assessment
         $n2 = 1;
         $sequence = [];
 
-        echo $n1.' '.$n2.' ';
+        //echo $n1.' '.$n2.' ';
 
         while ($n < $range) {
             $n3 = $n2 + $n1;
