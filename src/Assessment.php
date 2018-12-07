@@ -26,9 +26,7 @@ class Assessment
      */
     public function closestToZero(array $input, float $closestTo = self::INITIAL): float
     {
-        if (empty($input)) {
-            return self::INITIAL;
-        }
+        $this->isEmpty($input);
 
         $closest = self::INITIAL;
 
@@ -143,5 +141,20 @@ class Assessment
         }
 
         return $sequence;
+    }
+
+    /**
+     * Check if arrays is empty returns zero.
+     *
+     * @param array $input Empty array
+     * @return int
+     */
+    public function isEmpty(array $input): int
+    {
+        if (empty($input)) {
+            return self::INITIAL;
+        }
+
+        return 1;
     }
 }
