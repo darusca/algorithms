@@ -4,10 +4,10 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
-         stopOnFailure="true">
+         stopOnFailure="false">
     <testsuites>
         <testsuite name="All Tests">
-            <directory suffix="Test.php">./src/tests</directory>
+            <directory>src/tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
