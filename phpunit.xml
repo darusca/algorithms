@@ -1,13 +1,13 @@
-<phpunit bootstrap="src/tests/bootstrap.php"
+<phpunit bootstrap="vendor/autoload.php"
          colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
-         stopOnFailure="true">
+         stopOnFailure="false">
     <testsuites>
         <testsuite name="All Tests">
-            <directory>tests</directory>
+            <directory>src/tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>

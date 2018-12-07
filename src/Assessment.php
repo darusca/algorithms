@@ -26,9 +26,7 @@ class Assessment
      */
     public function closestToZero(array $input, float $closestTo = self::INITIAL): float
     {
-        if (empty($input)) {
-            return self::INITIAL;
-        }
+        $this->isEmpty($input);
 
         $closest = self::INITIAL;
 
@@ -38,7 +36,7 @@ class Assessment
             }
         }
 
-        echo 'Result ' . $closest;
+        echo "Result $closest \n";
 
         return $closest;
     }
@@ -128,7 +126,7 @@ class Assessment
         $n2 = 1;
         $sequence = [];
 
-        echo $n1.' '.$n2.' ';
+        //echo $n1.' '.$n2.' ';
 
         while ($n < $range) {
             $n3 = $n2 + $n1;
@@ -143,5 +141,20 @@ class Assessment
         }
 
         return $sequence;
+    }
+
+    /**
+     * Check if arrays is empty returns zero.
+     *
+     * @param array $input Empty array
+     * @return int
+     */
+    public function isEmpty(array $input): int
+    {
+        if (empty($input)) {
+            return self::INITIAL;
+        }
+
+        return 1;
     }
 }
