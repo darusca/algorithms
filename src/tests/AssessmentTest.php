@@ -22,7 +22,7 @@ class AssessmentTest extends TestCase
         $input = [];
         $actual = $this->assessment->closestToZero($input);
 
-        assertEquals(0, $actual);
+        $this->assertEquals(0, $actual);
     }
 
     public function testGivenArrReturnsArrElementClosestToZero()
@@ -30,21 +30,21 @@ class AssessmentTest extends TestCase
         $input = [7, -10, 13, 8, 4, -7.2, -12, -3.7, 3.5, -9.6, 6.5, -1.7, -6.2, -7];
         $actual = $this->assessment->closestToZero($input);
 
-        assertEquals(-1.7, $actual);
+        $this->assertEquals(-1.7, $actual);
     }
 
     public function testGivenArrForLoopSumsListOfNumbers()
     {
         $actual = $this->assessment->forLoop($this->numList);
 
-        assertEquals($this->expected, $actual);
+        $this->assertEquals($this->expected, $actual);
     }
 
     public function testGivenArrWhileLoopSumsListOfNumbers()
     {
         $actual = $this->assessment->whileLoop($this->numList);
 
-        assertEquals($this->expected, $actual);
+        $this->assertEquals($this->expected, $actual);
     }
 
     public function testGivenArrRecursivelyAddsListOfNumbers()
@@ -52,7 +52,7 @@ class AssessmentTest extends TestCase
         $n = count($this->numList);
         $actual = $this->assessment->add($this->numList, $n);
 
-        assertEquals($this->expected, $actual);
+        $this->assertEquals($this->expected, $actual);
     }
 
     public function testGivenTwoArraysAlternatelyCombinesArrays()
@@ -63,7 +63,7 @@ class AssessmentTest extends TestCase
         $actual = $this->assessment->combineArrays($arr1, $arr2);
         $expected = ['a', 1, 'b', 2, 'c', 3];
 
-        assertEquals($expected, $actual);
+        $this->assertEquals($expected, $actual);
     }
 
     public function testListsFirst100FibonacciNumbers()
@@ -71,6 +71,13 @@ class AssessmentTest extends TestCase
         $actual = count($this->assessment->fibonacci());
         $expected = 100;
 
-        assertEquals($expected, $actual);
+        $this->assertEquals($expected, $actual);
+    }
+
+    public function testIsEmpty()
+    {
+        $actual = $this->assessment->isEmpty([]);
+
+        $this->assertEquals(0, $actual);
     }
 }
